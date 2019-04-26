@@ -1,0 +1,221 @@
+{
+    "name": "Umbra",
+    "homepage": "https://github.com/Briles/umbra-sublime",
+    "author": "Brian Reilly (https://github.com/Briles)",
+    "variables": {
+        "bg_0": "#292a2e",
+        "fg_0": "#71727f",
+        "fg_1": "#777a92",
+        "fg_2": "#9092ad",
+        "fg_3": "#b2b6d7",
+        "red": "#f5616d",
+        "yellow": "#cabf49",
+        "blue": "#6c9ce4",
+        "green": "#71cc71",
+        "purple": "#d06ccd",
+        "orange": "#d78542",
+        "cyan": "#7cbbba",
+        "pink": "#ed8282",
+        "border": "color(var(bg_0) l(- 10%))",
+        "shadow": "color(var(bg_0) l(- 10%))",
+        "guide": "color(var(fg_1) a(0.2))",
+        "active_guide": "color(var(fg_1) a(0.4))",
+        "stack_guide": "color(var(fg_1) a(0.2))",
+        "ruler": "color(var(fg_1) a(0.4))"
+    },
+    "globals": {
+        "background": "var(bg_0)",
+        "foreground": "var(fg_1)",
+        "invisibles": "color(var(fg_1) a(0.25))",
+        "caret": "var(orange)",
+        "block_caret": "var(orange)",
+        "line_highlight": "color(var(bg_0) l(+ 2%))",
+        "misspelling": "var(red)",
+        "fold_marker": "var(fg_3)",
+        "minimap_border": "var(border)",
+        "accent": "var(yellow)",
+        "gutter": "var(bg_0)",
+        "gutter_foreground": "color(var(fg_3) a(0.3))",
+        "line_diff_width": "3",
+        "line_diff_added": "color(var(green) a(0.6))",
+        "line_diff_modified": "color(var(yellow) a(0.6))",
+        "line_diff_deleted": "color(var(red) a(0.6))",
+        "selection": "color(var(bg_0) l(+ 3%))",
+        "selection_border_width": "0",
+        "inactive_selection": "color(var(bg_0) l(+ 2%))",
+        "selection_corner_style": "round",
+        "selection_corner_radius": "0",
+        "highlight": "color(var(bg_0) l(+ 3%))",
+        "find_highlight": "color(var(bg_0) l(+ 3%))",
+        "guide": "var(guide)",
+        "active_guide": "var(active_guide)",
+        "stack_guide": "var(stack_guide)",
+        "brackets_options": "underline",
+        "brackets_foreground": "var(red)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(red)",
+        "tags_options": "underline",
+        "tags_foreground": "var(red)",
+        "shadow": "var(shadow)",
+        "shadow_width": "6"
+    },
+    "rules": [
+        {
+            "name": "Text and Source Base Colors",
+            "scope": "none,source,text",
+            "foreground": "var(fg_2)"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation,punctuation.definition.string",
+            "foreground": "var(fg_1)"
+        },
+        {
+            "name": "Comments",
+            "scope": "comment,comment text,markup.strikethrough,punctuation.definition.comment,punctuation.whitespace.comment,string.comment,text.cancelled",
+            "font_style": "italic",
+            "foreground": "var(fg_0)"
+        },
+        {
+            "name": "Keywords Inside Comments",
+            "scope": "comment.keyword,comment.keyword.punctuation,comment.parameter,comment.punctuation,comment.string,comment.type,keyword.other.phpdoc.php,punctuation.definition.keyword.javadoc,source.groovy keyword.other.documentation,source.java keyword.other.documentation,storage.type.annotation.coffeescript,storage.type.class.jsdoc,storage.type.class.jsdoc punctuation.definition",
+            "foreground": "var(fg_0)"
+        },
+        {
+            "name": "Strings",
+            "scope": "meta.object-literal.key string,string",
+            "foreground": ""
+        },
+        {
+            "name": "Variables",
+            "scope": "entity.name.val.declaration,entity.name.variable,meta.definition.variable,meta.interpolation,storage.type.variable,support.type.custom-property,support.type.variable-name,variable,variable.interpolation variable,variable.other.interpolation variable,variable.parameter.dosbatch,variable.parameter.output.function.matlab,variable.parameter.sass",
+            "foreground": "var(fg_3)"
+        },
+        {
+            "name": "Language variable",
+            "scope": "variable.language",
+            "foreground": "var(language)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Parameter",
+            "scope": "variable.parameter",
+            "font_style": "italic"
+        },
+        {
+            "name": "Storage (declaration or modifier keyword)",
+            "scope": "storage.modifier,storage.type",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Constant",
+            "scope": "constant",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "Language constant (boolean, null)",
+            "scope": "constant.language",
+            "foreground": "var(orange)"
+        },
+        {
+            "name": "Character escape",
+            "scope": "constant.character.escape",
+            "foreground": "var(fg_3)"
+        },
+        {
+            "name": "Entity",
+            "scope": "entity.name",
+            "foreground": "var(entity)"
+        },
+        {
+            "name": "HTML or XML tag",
+            "scope": "entity.name.tag",
+            "foreground": "var(tag)"
+        },
+        {
+            "name": "HTML or XML tag brackets",
+            "scope": "punctuation.definition.tag",
+            "foreground": "var(tag)"
+        },
+        {
+            "name": "Tag atttribute",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(attribute)"
+        },
+        {
+            "name": "Class",
+            "scope": "entity.name.type",
+            "foreground": "var(fg_3)"
+        },
+        {
+            "name": "Inherited class",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(inherited)"
+        },
+        {
+            "name": "Function",
+            "scope": "entity.name.function,variable.function",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Control keyword (if, try, while, etc.)",
+            "scope": "keyword.control",
+            "foreground": "var(red)"
+        },
+        {
+            "name": "Operator",
+            "scope": "keyword.operator",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "Special operator",
+            "scope": "keyword.operator.expression,keyword.operator.logical,keyword.operator.new",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "Unit",
+            "scope": "keyword.other.unit",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Support",
+            "scope": "support",
+            "foreground": "var(fg_3)"
+        },
+        {
+            "name": "Support function",
+            "scope": "support.function",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Support variable",
+            "scope": "support.variable",
+            "foreground": "var(fg_3)"
+        },
+        {
+            "name": "Object literal key / property",
+            "scope": "meta.object-literal.key,support.type.property-name",
+            "foreground": "var(cyan)"
+        },
+        {
+            "name": "Key-value separator",
+            "scope": "punctuation.separator.key-value",
+            "foreground": "var(fg_1)"
+        },
+        {
+            "name": "Key-value separator",
+            "scope": "meta.mapping.key string",
+            "foreground": "var(blue)"
+        }
+    ]
+}
